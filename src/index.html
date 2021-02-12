@@ -4,12 +4,22 @@
     <title>Currency Exchange Calculator</title>
   </head>
 <body>
-<form id="exchangeCalculator">
-  <input type="text" class="form-control currencyInput" step=".01" maxlength="3">
-  <input type="number" class="form-control numInput" step=".01" min=".01" value="1.00">
-  <button type="submit" class="btn btn-outline-success btn-sm">Submit</button>
-</form>
-<div class="results">
-</div>
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md">
+        <div class="form-group">
+          <form id="exchangeCalculator">
+            <input type="text" class="form-control currencyInput" step=".01" maxlength="3">
+            <input type="number" class="form-control numInput" step=".01" min=".01" value="1.00">
+            <button type="submit" class="btn btn-outline-success btn-sm">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="results">
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
