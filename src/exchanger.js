@@ -18,4 +18,7 @@ export default class CurrencyExchanger{
     let returnedNumber = inputtedValue * comparedValue;
     return parseFloat(returnedNumber).toFixed(2);
   }
+  static currencyTarget(comparedName, currencyNames, currencyRates){
+    
+  }
 }
