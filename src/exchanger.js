@@ -15,6 +15,7 @@ export default class CurrencyExchanger{
     });
   }
   static currencyCalculation(inputtedValue, comparedValue){
-    return "test";
+    let returnedNumber = inputtedValue * comparedValue;
+    return parseFloat(returnedNumber).toFixed(2);
   }
 }
