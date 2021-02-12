@@ -17,7 +17,7 @@ module.exports = {
     new Dotenv(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Weekend practice',
+      title: 'Currency Exchange Calculator',
       template: './src/index.html',
       inject: 'body'
     })
