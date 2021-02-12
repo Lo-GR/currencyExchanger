@@ -9,7 +9,7 @@ import CurrencyExchanger from "./exchanger.js"
 $(document).ready(function(){
   $("form#exchangeCalculator").submit(function(event){
     event.preventDefault();
-    let value = parseFloat($(".numInput").val());
+    let enteredValue = parseFloat($(".numInput").val());
     let currencyName = $(".currencyInput").val();
     let promise = CurrencyExchanger.exchanger();
     promise.then(function(response){
@@ -22,7 +22,7 @@ $(document).ready(function(){
       }
       if (conversionNameArray.includes(currencyName)){
         let chosenNameRate = CurrencyExchanger.currencyTarget(currencyName, conversionNameArray, conversionRateArray);
-        console.log(chosenNameRate);
+        $(".results").html(`Rate Exchange is ${CurrencyExchanger.currencyCalculation(enteredValue, chosenNameRate[1])} ${chosenNameRate[0]}`)
       } else {
         $(".results").html("That's not a currency, silly");
       }
