@@ -19,6 +19,13 @@ export default class CurrencyExchanger{
     return parseFloat(returnedNumber).toFixed(2);
   }
   static currencyTarget(comparedName, currencyNames, currencyRates){
-    
+    for (let index = 0; index < currencyNames.length; index ++){
+      if (comparedName === currencyNames[index]){
+        return [currencyNames[index], currencyRates[index]];
+      }
+    }
+    // Due to the "if" statement in the UI, this should never be seen.
+    // I included it in case there is a major error since static methods must return something.
+    return "error! Issue with currencyTarget function"
   }
 }
