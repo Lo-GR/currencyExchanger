@@ -2,7 +2,7 @@ export default class CurrencyExchanger{
   static exchanger (){
     return new Promise(function (resolve, reject){
       let request = new XMLHttpRequest();
-      const api = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
+      const api = `https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}&count=n`;
       request.onload = function(){
         if (this.status === 200){
           resolve(request.response);

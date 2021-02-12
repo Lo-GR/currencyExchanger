@@ -27,7 +27,10 @@ $(document).ready(function(){
         $(".results").html("That's not a currency, silly");
       }
     }, function(error){
+      $(".results").html("An error was received from the Exchange Rate API. Please try again another time!")
       console.log(error);
+      // const body = JSON.parse(error);
+      // $(".results").html(`Oh Dear! The Exchange Rate Server returned an error. They said:${body.error-type}`);
     })
   })
 });
