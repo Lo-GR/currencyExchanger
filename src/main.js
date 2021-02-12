@@ -13,7 +13,12 @@ $(document).ready(function(){
     let promise = CurrencyExchanger.exchanger();
     promise.then(function(response){
       const body = JSON.parse(response);
-      $(".results").html(`Current rate for 1 USD to BOB is ${body.conversion_rates.BOB}`);
+      let currencyNameArray = [];
+      let currencyRateArray = [];
+      for (const [key, value] of Object.entries(body.conversion_rates)){
+        currencyNameArray.push(key);
+        currencyRateArray.push(value);
+      }
     }, function(error){
       console.log(error);
     })
