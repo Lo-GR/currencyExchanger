@@ -14,4 +14,7 @@ export default class CurrencyExchanger{
       request.send();
     });
   }
+  static currencyCalculation(inputtedValue, comparedValue){
+    return "test";
+  }
 }

@@ -6,11 +6,5 @@ describe('CurrencyExchanger.currencyCalculation', () => {
     let inputtedValue = 1.25;
     let comparedValue = 2;
     expect(CurrencyExchanger.currencyCalculation(inputtedValue, comparedValue)).toEqual(2.50);
-
   });
-
-  // beforeEach(() => {
-  //   Var = etc;
-  // });
-
 });
