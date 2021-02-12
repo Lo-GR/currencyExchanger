@@ -10,11 +10,10 @@ $(document).ready(function(){
   $("form#exchangeCalculator").submit(function(event){
     event.preventDefault();
     let value = parseFloat($(".numInput").val());
-    console.log(value);
     let promise = CurrencyExchanger.exchanger();
     promise.then(function(response){
       const body = JSON.parse(response);
-      console.log(body);
+      $(".results").html(`Current rate for 1 USD to BOB is ${body.conversion_rates.BOB}`);
     }, function(error){
       console.log(error);
     })
