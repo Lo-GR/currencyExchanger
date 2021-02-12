@@ -1,1 +1,1 @@
-97461729daf6738b
+https://stackoverflow.com/questions/4435170/how-to-parse-float-with-two-decimal-places-in-javascript
