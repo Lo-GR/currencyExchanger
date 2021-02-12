@@ -10,8 +10,7 @@ $(document).ready(function(){
   $("form#exchangeCalculator").submit(function(event){
     event.preventDefault();
     let value = parseFloat($(".numInput").val());
-    // let currencyName = $("#currency").vall();
-    let currencyName = "GEL";
+    let currencyName = $(".currencyInput").val();
     let promise = CurrencyExchanger.exchanger();
     promise.then(function(response){
       const body = JSON.parse(response);
