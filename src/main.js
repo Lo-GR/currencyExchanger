@@ -4,12 +4,12 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import CurrencyExchanger from "./exchanger.js"
+import CurrencyExchanger from "./exchanger.js";
 
 $(document).ready(function(){
   $("form#exchangeCalculator").submit(function(event){
     $(".resultsCont").show();
-    $(".results").html('<div class="spinner-border text-success" role="status"><span class="sr-only">Loading...</span></div>')
+    $(".results").html('<div class="spinner-border text-success" role="status"><span class="sr-only">Loading...</span></div>');
     event.preventDefault();
     let enteredValue = parseFloat($(".numInput").val());
     let currencyName = $(".currencyInput").val();
@@ -24,12 +24,12 @@ $(document).ready(function(){
       }
       if (conversionNameArray.includes(currencyName)){
         let chosenNameRate = CurrencyExchanger.currencyTarget(currencyName, conversionNameArray, conversionRateArray);
-        $(".results").html(`<h1 class="display-4">You can exchange ${enteredValue} USD for ${CurrencyExchanger.currencyCalculation(enteredValue, chosenNameRate[1])} ${chosenNameRate[0]}</h1><p class="lead">This exchange rate is based on an estimate of today only. Actual returns may very.</p>`)
+        $(".results").html(`<h1 class="display-4">You can exchange ${enteredValue} USD for ${CurrencyExchanger.currencyCalculation(enteredValue, chosenNameRate[1])} ${chosenNameRate[0]}</h1><p class="lead">This exchange rate is based on an estimate of today only. Actual returns may very.</p>`);
       } else {
         $(".results").html(`<p class="lead">No known Currency with a Code of ${currencyName}</p>`);
       }
     }, function(error){
-      $(".results").html(`An error was received from the Exchange Rate API. Please try again another time! Error returned: ${error.error_type}`)
-    })
-  })
+      $(".results").html(`An error was received from the Exchange Rate API. Please try again another time! Error returned: ${error.error_type}`);
+    });
+  });
 });

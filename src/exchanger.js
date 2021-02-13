@@ -26,6 +26,6 @@ export default class CurrencyExchanger{
     }
     // Due to the "if" statement in the UI, this should never be seen.
     // I included it in case there is a major error since static methods must return something.
-    return "error! Issue with currencyTarget function"
+    return "error! Issue with currencyTarget function";
   }
 }
