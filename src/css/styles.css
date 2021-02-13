@@ -1,10 +1,10 @@
-h2, .spinner-border, .results h1, .results p {
+h2, .spinner-border, .results h1, p {
   text-align: center;
 }
 .btn, .form-control, .form-text, label{
   margin: 5px;
 }
-.col-md{
+.col-4, .col-8{
   border: 2px groove black;
 }
 .container{
@@ -22,4 +22,7 @@ h2, .spinner-border, .results h1, .results p {
 .results p, .results h1{
   font-weight:bolder;
   font-family: sans-serif;
+}
+.infoCont{
+  margin-top: 20px;
 }
