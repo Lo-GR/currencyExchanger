@@ -9,7 +9,7 @@ import CurrencyExchanger from "./exchanger.js";
 $(document).ready(function(){
   $("form#exchangeCalculator").submit(function(event){
     $(".resultsCont").show();
-    $(".results").html('<div class="spinner-border text-success" role="status"><span class="sr-only">Loading...</span></div>');
+    $(".results").html('<div class="spinner-border text-success" role="status"><span class="sr-only">Loading...</span></div>Loading.. if this loads longer than 1 minute, an error has occurred.</p>');
     event.preventDefault();
     let enteredValue = parseFloat($(".numInput").val());
     let currencyName = ($(".currencyInput").val()).toUpperCase();
