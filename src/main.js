@@ -8,6 +8,7 @@ import CurrencyExchanger from "./exchanger.js"
 
 $(document).ready(function(){
   $("form#exchangeCalculator").submit(function(event){
+    $(".results").html('<div class="spinner-border text-success" role="status"><span class="sr-only">Loading...</span></div>')
     event.preventDefault();
     let enteredValue = parseFloat($(".numInput").val());
     let currencyName = $(".currencyInput").val();
@@ -29,8 +30,8 @@ $(document).ready(function(){
     }, function(error){
       $(".results").html("An error was received from the Exchange Rate API. Please try again another time!")
       console.log(error);
-      // const body = JSON.parse(error);
-      // $(".results").html(`Oh Dear! The Exchange Rate Server returned an error. They said:${body.error-type}`);
+      //this is put in a console log because I wasn't able to verify how the error response would look like from this api.
+      //This is because this api returns status 200 OK for errors
     })
   })
 });

@@ -5,18 +5,24 @@
   </head>
 <body>
   <div class="jumbotron">
-    <div class="row">
-      <div class="col-md">
-        <div class="form-group">
-          <form id="exchangeCalculator">
-            <input type="text" class="form-control currencyInput" step=".01" maxlength="3">
-            <input type="number" class="form-control numInput" step=".01" min=".01" value="1.00">
-            <button type="submit" class="btn btn-outline-success btn-sm">Submit</button>
-          </form>
+    <h2>Currency Exchange Calculator</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <div class="form-group">
+            <form id="exchangeCalculator">
+              <label for="currencyInput">Please enter a currency</label>
+              <input type="text" class="form-control currencyInput" step=".01" maxlength="3">
+              <small id="curHelp" class="form-text text-muted">Please enter the three letter code corresponding to the currency you wish to convert to. </small>
+              <input type="number" class="form-control numInput" step=".01" min=".01" value="1.00">
+              <small id="numHelp" class="form-text text-muted">Please enter the amount of USD that you would like to convert </small>
+              <button type="submit" class="btn btn-success btn-sm">Submit</button>
+            </form>
+          </div>
         </div>
-      </div>
-      <div class="col-md">
-        <div class="results">
+        <div class="col-md">
+          <div class="results">
+          </div>
         </div>
       </div>
     </div>

@@ -1,3 +1,15 @@
+html {
+  background-color: #FFC15E;
+}
+h2 {
+  text-align: center;
+}
+.btn, .form-control, .form-text, label{
+  margin: 5px;
+}
 .col-md{
   border: 2px groove black;
+}
+.container{
+  background-color:azure;
 }
