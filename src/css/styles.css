@@ -15,6 +15,7 @@ h2, .spinner-border, .results h1, p {
   border-width: 2px;
   border-style: solid;
   box-shadow: 1px 1px 4px 0px #00000042;
+  display: none;
 }
 .results h1{
   color: #26532B;

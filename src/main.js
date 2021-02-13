@@ -8,6 +8,7 @@ import CurrencyExchanger from "./exchanger.js"
 
 $(document).ready(function(){
   $("form#exchangeCalculator").submit(function(event){
+    $(".resultsCont").show();
     $(".results").html('<div class="spinner-border text-success" role="status"><span class="sr-only">Loading...</span></div>')
     event.preventDefault();
     let enteredValue = parseFloat($(".numInput").val());
@@ -23,15 +24,12 @@ $(document).ready(function(){
       }
       if (conversionNameArray.includes(currencyName)){
         let chosenNameRate = CurrencyExchanger.currencyTarget(currencyName, conversionNameArray, conversionRateArray);
-        $(".results").html(`<h1 class="display-4">You can exchange ${enteredValue} USD for ${CurrencyExchanger.currencyCalculation(enteredValue, chosenNameRate[1])} ${chosenNameRate[0]}</h1><p class="lead">This exchange rate is based on an estimate of today only. Actual returns may very</p>`)
+        $(".results").html(`<h1 class="display-4">You can exchange ${enteredValue} USD for ${CurrencyExchanger.currencyCalculation(enteredValue, chosenNameRate[1])} ${chosenNameRate[0]}</h1><p class="lead">This exchange rate is based on an estimate of today only. Actual returns may very.</p>`)
       } else {
-        $(".results").html("That's not a currency, silly");
+        $(".results").html(`<p class="lead">No known Currency with a Code of ${currencyName}</p>`);
       }
     }, function(error){
-      $(".results").html("An error was received from the Exchange Rate API. Please try again another time!")
-      console.log(error);
-      //this is put in a console log because I wasn't able to verify how the error response would look like from this api.
-      //This is because this api returns status 200 OK for errors
+      $(".results").html(`An error was received from the Exchange Rate API. Please try again another time! Error returned: ${error.error_type}`)
     })
   })
 });
