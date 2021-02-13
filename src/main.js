@@ -12,7 +12,7 @@ $(document).ready(function(){
     $(".results").html('<div class="spinner-border text-success" role="status"><span class="sr-only">Loading...</span></div>');
     event.preventDefault();
     let enteredValue = parseFloat($(".numInput").val());
-    let currencyName = $(".currencyInput").val();
+    let currencyName = ($(".currencyInput").val()).toUpperCase();
     let promise = CurrencyExchanger.exchanger();
     promise.then(function(response){
       const body = JSON.parse(response);
