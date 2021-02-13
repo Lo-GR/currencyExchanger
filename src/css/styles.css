@@ -1,7 +1,4 @@
-html {
-  background-color: #FFC15E;
-}
-h2 {
+h2, .spinner-border, .results h1, .results p {
   text-align: center;
 }
 .btn, .form-control, .form-text, label{
@@ -11,5 +8,18 @@ h2 {
   border: 2px groove black;
 }
 .container{
-  background-color:azure;
+  background-color: #EEF5DB;
+}
+.resultsCont{
+  margin-top: 10px;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 1px 1px 4px 0px #00000042;
+}
+.results h1{
+  color: #26532B;
+}
+.results p, .results h1{
+  font-weight:bolder;
+  font-family: sans-serif;
 }

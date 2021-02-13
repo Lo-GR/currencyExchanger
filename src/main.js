@@ -23,7 +23,7 @@ $(document).ready(function(){
       }
       if (conversionNameArray.includes(currencyName)){
         let chosenNameRate = CurrencyExchanger.currencyTarget(currencyName, conversionNameArray, conversionRateArray);
-        $(".results").html(`Rate Exchange is ${CurrencyExchanger.currencyCalculation(enteredValue, chosenNameRate[1])} ${chosenNameRate[0]}`)
+        $(".results").html(`<h1 class="display-4">You can exchange ${enteredValue} USD for ${CurrencyExchanger.currencyCalculation(enteredValue, chosenNameRate[1])} ${chosenNameRate[0]}</h1><p class="lead">This exchange rate is based on an estimate of today only. Actual returns may very</p>`)
       } else {
         $(".results").html("That's not a currency, silly");
       }
