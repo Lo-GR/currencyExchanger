@@ -29,7 +29,8 @@ $(document).ready(function(){
         $(".results").html(`<p class="lead">No known Currency with a Code of ${currencyName}</p>`);
       }
     }, function(error){
-      $(".results").html(`An error was received from the Exchange Rate API. Please try again another time! Error returned: ${error.error_type}`);
+      let errorJSON = JSON.parse(error);
+      $(".results").html(`An error was received from the Exchange Rate API. Please try again another time! Error returned: ${errorJSON["error-type"]}`);
     });
   });
 });

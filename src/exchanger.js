@@ -4,7 +4,7 @@ export default class CurrencyExchanger{
       let request = new XMLHttpRequest();
       const api = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
       request.onload = function(){
-        if (this.status === 200){
+        if (request.response.result === "success"){
           resolve(request.response);
         } else {
           reject(request.response);
