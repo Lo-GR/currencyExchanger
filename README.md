@@ -40,8 +40,8 @@ This is a practice project for practicing API, Promises, and JSON Parsing for a 
 >API_KEY=[PASTE YOUR API KEY HERE]
 
 5. Navigate to the root directory of the project in your terminal and type "npm install" to install development environment needed.
-6. In your terminal, type "npm run start" to view the project in your default browser on a live server.
-7. In your terminal, type "npm run build" to bundle the project with applicable webpacks implemented.
+6. In your terminal, type "npm run build" to bundle the project with applicable webpacks implemented.
+7. In your terminal, type "npm run start" to view the project in your default browser on a live server.
 
 ## _Known Bugs_
 * No known bugs at this time. Please contact a contributor to report any bugs found during use.
