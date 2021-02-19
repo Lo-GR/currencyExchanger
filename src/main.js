@@ -16,6 +16,7 @@ $(document).ready(function(){
     let promise = CurrencyExchanger.exchanger();
     promise.then(function(response){
       const body = JSON.parse(response);
+      console.log("test");
       let conversionNameArray = [];
       let conversionRateArray = [];
       for (const [key, value] of Object.entries(body.conversion_rates)){
